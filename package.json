@@ -1,0 +1,23 @@
+{
+	"name": "pokemon-db",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"dev": "concurrently \"cd client && pnpm dev\" \"cd server && pnpm dev\"",
+		"start": "concurrently \"cd client && pnpm preview\" \"cd server && pnpm serve\"",
+		"lint": "oxlint . && prettier --write ."
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"concurrently": "^8.2.2",
+		"eslint": "^8.56.0",
+		"eslint-config-prettier": "^9.1.0",
+		"eslint-plugin-oxlint": "^0.2.3",
+		"eslint-plugin-prettier": "^5.1.3",
+		"prettier": "^3.2.4",
+		"prettier-plugin-svelte": "^3.2.2"
+	}
+}
