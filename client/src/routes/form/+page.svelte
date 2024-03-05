@@ -1,6 +1,6 @@
 <script script lang="ts" module>
 	import SuperDebug, { superForm } from "sveltekit-superforms"
-	import * as devalue from "devalue"
+
 	import { deleteAll, getPokemons, root, getPokemon, getPokemonByName, seed } from "$api"
 
 	export let data
