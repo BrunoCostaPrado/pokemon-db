@@ -1,6 +1,6 @@
 .DS_Store
 node_modules
-# /build
+*/build
 /package
 # .env
 .env.*
@@ -26,4 +26,9 @@ junit-report.xml
 
 
 #/client
+/client/build
+
+
+
 #/server
+/server/build
