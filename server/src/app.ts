@@ -6,7 +6,6 @@ import {
 	getPokemons,
 	getPokemon,
 	getPokemonByName,
-	// updatePokemons,
 	seed,
 	deleteAll,
 	deletePokemons
@@ -27,8 +26,6 @@ app.register(getPokemon)
 app.register(getPokemonByName)
 
 app.register(createPokemon)
-
-// app.register(updatePokemons)
 
 await app.register(cors, {
 	origin: "*"

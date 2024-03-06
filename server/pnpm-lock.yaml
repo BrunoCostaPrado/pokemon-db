@@ -52,6 +52,9 @@ devDependencies:
   del:
     specifier: ^7.1.0
     version: 7.1.0
+  devalue:
+    specifier: ^4.3.2
+    version: 4.3.2
   esbuild:
     specifier: ^0.20.0
     version: 0.20.0
@@ -2048,6 +2051,10 @@ packages:
   /destroy@1.2.0:
     resolution: {integrity: sha512-2sJGJTaXIIaR1w4iJSNoN0hnMY7Gpc/n8D4qSCJw8QqFWXf7cuAgnEHxBpweaVcPevC2l3KpjYCx3NypQQgaJg==}
     engines: {node: '>= 0.8', npm: 1.2.8000 || >= 1.4.16}
+    dev: true
+
+  /devalue@4.3.2:
+    resolution: {integrity: sha512-KqFl6pOgOW+Y6wJgu80rHpo2/3H07vr8ntR9rkkFIRETewbf5GaYYcakYfiKz89K+sLsuPkQIZaXDMjUObZwWg==}
     dev: true
 
   /devtools-protocol@0.0.1107588:

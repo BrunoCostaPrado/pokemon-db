@@ -27,33 +27,4 @@ export const getPokemonParams = z.object({
 	pokemonId: z.string().uuid()
 })
 
-export const updatePokemonInfo = z.object({
-	pokemonNumber: z.number().int()
-	// pokemonPrice: z.string(),
-	// pokemonQuantity: z.number(),
-	// pokemonRarity: z.string(),
-	// pokemonCollection: z.string()
-})
-
-const updatePokemonParamsType = z.object({
-	pokemonNumber: z.number(),
-	pokemonPrice: z.string(),
-	pokemonQuantity: z.number(),
-	pokemonRarity: z.string(),
-	pokemonCollection: z.string()
-})
-
-export type updatePokemonParamsType = z.infer<typeof updatePokemonParamsType>
-
-const UpdatePokemonInfo = z.object({
-	pokemonName: z.string().optional(),
-	pokemonNumber: z.number().optional(),
-	pokemonPrice: z.string().optional(),
-	pokemonQuantity: z.number().optional(),
-	pokemonRarity: z.string().optional(),
-	pokemonCollection: z.string().optional()
-})
-
-export type UpdatePokemonInfo = z.infer<typeof UpdatePokemonInfo>
-
 /// <reference path="./types.d.ts" />
