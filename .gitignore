@@ -10,7 +10,7 @@ vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 
 server/prisma/docs
-server/prisma\db.svg
+server/prisma/db.svg
 stats.html
 /.vs
 manifest_and_icons
