@@ -28,7 +28,8 @@ junit-report.xml
 #/client
 /client/build
 
-
+/client/.svelte-kit
 
 #/server
-/server/build
+# /server/build
+type-check

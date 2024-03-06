@@ -5,7 +5,8 @@
 	"main": "index.js",
 	"scripts": {
 		"dev": "concurrently \"cd client && pnpm dev\" \"cd server && pnpm dev\"",
-		"start": "concurrently \"cd client && pnpm preview\" \"cd server && pnpm serve\"",
+		"start": "concurrently \"cd client && pnpm build && pnpm preview \" \"cd server && pnpm serve\"",
+		"start:host": "concurrently \"cd client && pnpm build && pnpm preview --host\" \"cd server && pnpm serve\"",
 		"lint": "oxlint . && prettier --write ."
 	},
 	"keywords": [],

@@ -79,7 +79,7 @@
 			"format": "esm"
 		},
 		"src/routes/seed.ts": {
-			"bytes": 1185,
+			"bytes": 1186,
 			"imports": [
 				{ "path": "src/lib/index.ts", "kind": "import-statement", "original": "$lib" },
 				{ "path": "@faker-js/faker", "kind": "import-statement", "external": true },
@@ -136,7 +136,7 @@
 		}
 	},
 	"outputs": {
-		"build/app.js.map": { "imports": [], "exports": [], "inputs": {}, "bytes": 14349 },
+		"build/app.js.map": { "imports": [], "exports": [], "inputs": {}, "bytes": 14350 },
 		"build/app.js": {
 			"imports": [
 				{ "path": "@fastify/cors", "kind": "import-statement", "external": true },
@@ -166,9 +166,9 @@
 				"src/routes/get-pokemon-name.ts": { "bytesInOutput": 435 },
 				"src/routes/deleteAll.ts": { "bytesInOutput": 194 },
 				"src/routes/delete-pokemon.ts": { "bytesInOutput": 259 },
-				"src/routes/seed.ts": { "bytesInOutput": 599 }
+				"src/routes/seed.ts": { "bytesInOutput": 600 }
 			},
-			"bytes": 3742
+			"bytes": 3743
 		}
 	}
 }

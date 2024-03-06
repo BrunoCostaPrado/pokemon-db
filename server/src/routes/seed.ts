@@ -8,7 +8,7 @@ export async function seed(app: FastifyInstance) {
 		console.time("Create Pokemons")
 		await prisma.pokemons.deleteMany({})
 
-		const amountOfPokemons = 30
+		const amountOfPokemons = 300
 		const pokemon: pokemon[] = []
 
 		for (let i = 0; i < amountOfPokemons; i++) {

@@ -3,8 +3,6 @@
 
 	import { DataHandler, Datatable, Th, ThFilter } from "@vincjo/datatables"
 	export let data: PageData
-	import { Pokemon } from "$lib"
-	// import * as devalue from "devalue"
 
 	const { poke } = data
 

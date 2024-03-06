@@ -1,6 +1,6 @@
 import { deleteAsync } from "del"
 // const del = deleteAsync
-const deletedFilePaths = await deleteAsync(["build.html"])
+const deletedFilePaths = await deleteAsync(["stats.html"])
 
 const deletedDirectoryPaths = await deleteAsync(["build", ".svelte-kit"])
 
