@@ -14,6 +14,8 @@ server/prisma/db.svg
 client/stats.html
 client/.vs
 client/.vscode
+client/test-results
+client/tests/result
 /.vs
 /.vscode
 manifest_and_icons

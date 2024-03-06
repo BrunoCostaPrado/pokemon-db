@@ -1,0 +1,20 @@
+import { test, expect } from "@playwright/test"
+
+test("test", async ({ page }) => {
+	await page.goto("http://localhost:5173/form")
+	await page.locator('input[name="name"]').click()
+	await page.locator('input[name="name"]').fill("Test")
+	await page.locator('input[name="number"]').click()
+	await page.locator('input[name="number"]').fill("02")
+	await page.locator('input[name="price"]').click()
+	await page.locator('input[name="price"]').fill("2,3")
+	await page.locator('input[name="quantity"]').click()
+	await page.locator('input[name="quantity"]').fill("02")
+	await page.locator('input[name="rarity"]').click()
+	await page.locator('input[name="rarity"]').fill("Test")
+	await page.locator('input[name="collection"]').click()
+	await page.locator('input[name="collection"]').fill("Test")
+	await page.locator('input[name="name"]').click()
+	await page.locator('input[name="name"]').fill("Test")
+	await page.getByRole("button", { name: "Submit" }).click()
+})
