@@ -12,5 +12,8 @@ vite.config.ts.timestamp-*
 server/prisma/docs
 server/prisma/db.svg
 stats.html
+client/.vs
+client/.vscode
 /.vs
+/.vscode
 manifest_and_icons
