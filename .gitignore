@@ -16,6 +16,7 @@ client/.vs
 client/.vscode
 client/test-results
 client/tests/result
+client/playwright-report
 /.vs
 /.vscode
 manifest_and_icons
