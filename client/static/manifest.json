@@ -1,20 +1,55 @@
 {
-	"theme_color": "#8936FF",
-	"background_color": "#2EC6FE",
+	"name": "Pokemon TCG Collection DataBase",
+	"short_name": "This name will show in your Windows taskbar, in the start menu, and Android homescreen",
+	"start_url": "localhost:5173/pokemon",
+	"display": "standalone",
+	"display_override": ["fullscreen", "minimal-ui"],
+	"description": "Pokemon TCG Collection DataBase",
+	"lang": " PT-Br",
+	"dir": "auto",
+	"theme_color": "#000000",
+	"background_color": "#000000",
+	"orientation": "any",
 	"icons": [
 		{
-			"purpose": "maskable",
+			"src": "static/icon512_rounded.png",
 			"sizes": "512x512",
-			"src": "icon512_rounded.png",
-			"type": "image/png"
+			"type": "image/png",
+			"purpose": "maskable"
 		},
-		{ "purpose": "any", "sizes": "512x512", "src": "icon512_rounded.png", "type": "image/png" }
+		{
+			"src": "static/icon512_rounded.png",
+			"sizes": "192x192",
+			"type": "image/png",
+			"purpose": "any"
+		}
 	],
-	"orientation": "any",
-	"display": "browser",
-	"dir": "auto",
-	"lang": "pt-BR",
-	"description": "poke-db",
-	"name": "Pokemon TCG Collection DataBase",
-	"short_name": "Poke-DB"
+	"screenshots": [
+		{
+			"src": "https://www.pwabuilder.com/assets/screenshots/screen1.png",
+			"sizes": "2880x1800",
+			"type": "image/png",
+			"description": "A screenshot of the home page"
+		}
+	],
+	"related_applications": [
+		{
+			"platform": "windows",
+			"url": " localhost:5173/pokemon"
+		}
+	],
+	"prefer_related_applications": false,
+	"shortcuts": [
+		{
+			"name": "Pokemon TCG Collection DataBase",
+			"url": "localhost:5173/pokemon",
+			"description": "Pokemon TCG Collection DataBase"
+		}
+	],
+	"protocol_handlers": [
+		{
+			"protocol": "web+pokemon",
+			"url": "localhost:5173/pokemon?uri=%s"
+		}
+	]
 }
