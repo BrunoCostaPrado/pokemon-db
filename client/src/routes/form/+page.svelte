@@ -1,24 +1,27 @@
 <script script lang="ts" module>
-	import SuperDebug, { superForm } from "sveltekit-superforms"
+import SuperDebug, { superForm } from "sveltekit-superforms"
 
-	import { deleteAll, getPokemons, root, getPokemon, getPokemonByName, seed } from "$api"
+import { deleteAll, getPokemon, getPokemons, root, seed } from "$api"
 
-	export let data
+export let data
 
-	const { form, errors, constraints, enhance, reset, message } = superForm(data.form, {
-		resetForm: false,
-		onUpdate({ form }) {
-			if (!data.form.data.name) {
-				reset({ keepMessage: true })
-			}
-		}
-	})
+const { form, errors, constraints, enhance, reset, message } = superForm(
+  data.form,
+  {
+    resetForm: false,
+    onUpdate({ form }) {
+      if (!data.form.data.name) {
+        reset({ keepMessage: true })
+      }
+    },
+  },
+)
 
-	export { form }
-	export { $data, $constraints }
+export { form }
+export { $data, $constraints }
 </script>
 
-<!-- <SuperDebug data={$form} /> -->
+<SuperDebug data={$form} />
 
 <article>
 	<header>
@@ -51,7 +54,7 @@
 
 			<label for="price">Price</label>
 			<input
-				type="text"
+				type="number"
 				name="price"
 				aria-invalid={$errors.price ? "true" : undefined}
 				bind:value={$form.price}
@@ -101,7 +104,7 @@
 			>
 
 			<button type="button" class="btn btn-xl variant-filled-warning" on:click={deleteAll}
-				>deleteAll</button
+				>delete All</button
 			>
 
 			<button type="button" class="btn btn-xl variant-filled" on:click={root}>Root</button>
@@ -109,9 +112,11 @@
 
 		<div>
 			<button type="button" class="btn btn-xl variant-filled" on:click={getPokemon}
-				>getPokemon</button
+				>get Pokemon</button
 			>
 		</div>
+
+		
 		<!-- <div class="px-2 py-2 flex flex-row justify-start">hello</div> -->
 
 		<br />

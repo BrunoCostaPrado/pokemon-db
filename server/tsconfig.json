@@ -1,33 +1,38 @@
 {
-	"compilerOptions": {
-		"target": "ES2022",
-		"module": "ES2022",
-		"moduleResolution": "Bundler",
-		"sourceMap": true,
-		"esModuleInterop": true,
-		"forceConsistentCasingInFileNames": true,
-		"plugins": [{ "transform": "transformer-module" }],
-		"resolveJsonModule": true,
-		"baseUrl": ".",
-		"paths": {
-			"$lib": ["src/lib"],
-			"$routes": ["src/routes"],
-			"$ws": ["src/ws"]
-		},
-		"strict": true,
-		"strictNullChecks": true,
-		"allowJs": true,
-		"checkJs": true,
-		"lib": ["ES2023", "DOM"],
-		"noImplicitAny": false,
-		"outDir": "build",
-		"importHelpers": true,
-		"declarationMap": true,
-		"declarationDir": "type-check",
-		"emitDeclarationOnly": true,
-		"declaration": true
-		//"noEmit": true
-	},
-	"include": ["src"],
-	"exclude": ["node_modules", "prisma", "build", "type-check"]
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ES2022",
+    "moduleResolution": "Bundler",
+    "sourceMap": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "plugins": [
+      {
+        "transform": "transformer-module"
+      }
+    ],
+    "resolveJsonModule": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      "$lib/*": ["src/lib/*"],
+      "$routes": ["src/routes"],
+      "$ws": ["src/ws"]
+    },
+    "strict": true,
+    "strictNullChecks": true,
+    "allowJs": true,
+    "checkJs": true,
+    "lib": ["ES2023", "DOM"],
+    "noImplicitAny": false,
+    "outDir": "build",
+    "importHelpers": true,
+    "declarationMap": true,
+    "declarationDir": "type-check",
+    "emitDeclarationOnly": true,
+    "declaration": true
+    //"noEmit": true
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "prisma", "build", "type-check"]
 }

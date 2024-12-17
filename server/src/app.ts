@@ -1,18 +1,17 @@
+import { app, host, port } from "./lib/fastify"
+
 import cors from "@fastify/cors"
 import websocket from "@fastify/websocket"
-import { host, port, app } from "$lib"
-import {
-	createPokemon,
-	getPokemons,
-	getPokemon,
-	getPokemonByName,
-	seed,
-	deleteAll,
-	deletePokemons
-} from "$routes"
+import { createPokemon } from "./routes/create-pokemon"
+import { deletePokemons } from "./routes/delete-pokemon"
+import { deleteAll } from "./routes/deleteAll"
+import { getPokemons } from "./routes/get-all-pokemon"
+import { getPokemon } from "./routes/get-pokemon"
+import { getPokemonByName } from "./routes/get-pokemon-name"
+import { seed } from "./routes/seed"
 
 app.get("/", async (req, reply) => {
-	return await reply.status(202).send("hello")
+  return await reply.status(202).send("hello")
 })
 
 app.register(seed, { prefix: "/seed" })
@@ -28,18 +27,18 @@ app.register(getPokemonByName)
 app.register(createPokemon)
 
 await app.register(cors, {
-	origin: "*"
+  origin: "*",
 })
 
 async function main() {
-	try {
-		await app.listen({ port, host })
+  try {
+    await app.listen({ port, host })
 
-		console.log(`Server listening on ${host}:${port}`)
-	} catch (e) {
-		console.log(e)
-		process.exit(1)
-	}
+    console.log(`Server listening on ${host}:${port}`)
+  } catch (e) {
+    console.log(e)
+    process.exit(1)
+  }
 }
 
 main()

@@ -1,0 +1,28 @@
+# docker run -p 5432:5432 -e POSTGRES_PASSWORD=docker postgres
+# docker-compose up
+name: pokemon-db
+services:
+  postgres:
+    image: postgres
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=docker
+      - POSTGRES_PASSWORD=docker
+      - POSTGRES_DB=pokemon
+    volumes:
+      - pokemon_pg_data:/postgres
+
+  redis:
+    image: bitnami/redis:latest
+    environment:
+      # REDIS_PASSWORD: redis
+      - ALLOW_EMPTY_PASSWORD=yes
+    ports:
+      - "6379:6379"
+    volumes:
+      - "pokemon_redis_data:/bitnami/redis/data"
+
+volumes:
+  pokemon_pg_data:
+  pokemon_redis_data:
